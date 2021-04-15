@@ -45,7 +45,7 @@ function loginUser($conn, $email, $password, $status)
                 $sql = mysqli_query($conn, "UPDATE khaters SET status='{$status}' WHERE unique_id=  {$_SESSION['unique_id']}");
                 if ($sql){
                     echo "success";
-                    mysqli_close($sql_query);
+                    $close=mysqli_close($sql_query);
                 }
             }
         } else {
