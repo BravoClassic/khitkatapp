@@ -6,6 +6,7 @@ function emailExists($conn, $email): bool
     $sqlQuery = mysqli_query($conn, $sql);
     if (mysqli_num_rows($sqlQuery) > 0) {
         // echo "$email - Exists already";
+        mysqli_close($sqlQuery);
         return true;
     } else {
         return false;
@@ -24,6 +25,7 @@ VALUES ('{$random_id}','{$fname}','{$lname}','{$email}','{$hashed}','{$profile}'
             $row = mysqli_fetch_assoc($sql_query);
             $_SESSION['unique_id'] = $row['unique_id'];
             echo "success";
+            mysqli_close($sql_query);
         }
     } else {
         echo "Unfortunately, something went wrong!";
@@ -41,8 +43,10 @@ function loginUser($conn, $email, $password, $status)
             $_SESSION['unique_id'] = $row['unique_id'];
             if (isset($_SESSION['unique_id'])) {
                 $sql = mysqli_query($conn, "UPDATE khaters SET status='{$status}' WHERE unique_id=  {$_SESSION['unique_id']}");
-                if ($sql)
+                if ($sql){
                     echo "success";
+                    mysqli_close($sql_query);
+                }
             }
         } else {
             echo "This is an invalid password.";

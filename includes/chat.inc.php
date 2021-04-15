@@ -11,6 +11,8 @@ if(isset($_SESSION['unique_id'])){
         $sql2=mysqli_query($conn, "SELECT fname FROM khaters WHERE unique_id = {$outgoing_id}");
         if(mysqli_num_rows($sql2)>0){
             $row=mysqli_fetch_assoc($sql2);
+            mysqli_close($sql);
+            mysqli_close($sql2);
             $name=$row['fname'];
             $data = "$outgoing_id,$incoming_id,$message,$unique_id,$name";//0:sender, 1:receiver, 2:message, 3:unique_id, 4:name
         }

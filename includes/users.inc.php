@@ -9,5 +9,7 @@ if (mysqli_num_rows($sql_query) == 1) {
     $output .= "No users are on the platform";
 } elseif (mysqli_num_rows($sql_query) > 0) {
     include 'list.inc.php';
+    mysqli_close($query_two);
 }
+mysqli_close($sql_query);
 echo $output;
