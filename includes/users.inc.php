@@ -2,7 +2,7 @@
 session_start();
 include_once 'db.inc.php';
 $sender_id =$_SESSION['unique_id'];
-$sql_query = mysqli_query($conn, "SELECT * FROM khaters WHERE NOT unique_id={$sender_id} ORDER BY fname",MYSQLI_USE_RESULT);
+$sql_query = mysqli_query($conn, "SELECT * FROM khaters WHERE NOT unique_id={$sender_id} ORDER BY fname");
 // $result = mysqli_store_result($sql_query);
 $output;
 if (mysqli_num_rows($sql_query) == 1) {
