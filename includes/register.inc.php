@@ -21,7 +21,7 @@ if (!empty($fname) && !empty($lname) && !empty($email) && !empty($password)) {
                 //Get the extension of the image 
                 $img_explode = explode(".", $profile_image_name);
                 $img_ext = end($img_explode); //Extension of image here
-                $extensions = ['png', 'jpg', 'jpeg'];
+                $extensions = ['png', 'jpg', 'jpeg','PNG','JPEG','JPG'];
                 if (in_array($img_ext, $extensions)) {
                     $time = time();
                     $new_image_name = $time.$profile_image_name;
