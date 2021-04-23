@@ -3,9 +3,9 @@
 while ($row = mysqli_fetch_assoc($sql_query)) {
     $unique_id = $row['unique_id'];
     $sql_query_two = "SELECT * FROM message_khater WHERE (receiver_id={$unique_id} OR sender_id={$unique_id}) AND (receiver_id={$sender_id} OR sender_id={$sender_id}) ORDER BY message_id DESC LIMIT 1";
-    $query_two = mysqli_query($conn, $sql_query_two);
+    $query_two = mysqli_query($conn, $sql_query_two,MYSQLI_USE_RESULT);
     $row2 = mysqli_fetch_assoc($query_two);
-    if (!mysqli_num_rows($row2)) { //something is not right here.... Need to check it later
+    if (!mysqli_num_rows($query_twos)) { //something is not right here.... Need to check it later
         $result = $row2['text'];
     } else {
         $result = "No messages avaliable...";

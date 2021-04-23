@@ -22,7 +22,7 @@ include_once "header.php";
                     <i class="fas fa-eye"></i>
                 </div>
                 <div class="field button">
-                    <input type="submit" value="Register">
+                    <input type="submit" value="Login">
                 </div>
                 <div class="link">Not registered? <a href="index.php">Register now</a></div>
             </form>
