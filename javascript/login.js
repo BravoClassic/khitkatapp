@@ -26,3 +26,25 @@ registerBtn.onclick = () => {
     let formData = new FormData(form); //new form data object created
     xhr.send(formData); // sending the data to php
 }
+
+function showNotification() {
+    var notification = new Notification("Thank you! - Khitkhat", {
+        body: "This is a notification from Khitkhat!",
+        icon: "images/icon/icon.png"
+    });
+}
+
+window.onload = () => {
+    if (!("Notification" in window)) {
+        alert("This browser does not support desktop notification");
+    }
+    // Otherwise, we need to ask the user for permission
+    else if (Notification.permission !== "denied") {
+        Notification.requestPermission().then(function(permission) {
+            // If the user accepts, let's create a notification
+            if (permission === "granted") {
+                showNotification();
+            }
+        });
+    }
+}

@@ -9,7 +9,7 @@ include_once "header.php";
 <body data-new-gr-c-s-check-loaded="8.872.0" data-gr-ext-installed="">
     <div class="wrapper">
         <section class="form login">
-            <header>Khitkhat</header>
+            <header>Yotes Chat</header>
             <form action="#">
                 <div class="error-text">This is the error messages! Hehe!</div>
                 <div class="field input">

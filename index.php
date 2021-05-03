@@ -9,7 +9,7 @@ if(isset($_SESSION['unique_id'])){
 <body>
     <div class="wrapper">
         <section class="form signup">
-            <header>Khitkhat</header>
+            <header>Yotes Chat</header>
             <form action="#" enctype="multipart/form-data">
                 <div class="error-text">This is the error messages! Hehe!</div>
                 <div class="name-details" >
