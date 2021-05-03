@@ -73,3 +73,20 @@ function showNotification(details) {
         window.location.href = `chat.php?user_id=${details[0]}`;
     }
 }
+
+window.onbeforeunload = () => {
+    let xhr = new XMLHttpRequest(); //creating XML object 
+    xhr.open("GET", "includes/logout.inc.php", true);
+    xhr.onload = () => {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                let data = xhr.response;
+                console.log(data);
+                if (data == "success") {
+                    location.href = "login.php";
+                }
+            }
+        }
+    }
+    xhr.send();
+}
