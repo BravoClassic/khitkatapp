@@ -14,7 +14,7 @@
 // $db = substr($url["path"], 1);
 
 
-$server = "localhost:3306";
+$server = "localhost";
 $username = "adminyotes";
 $password = "]hNfc%~jm1^u";
 $db = "yoteschat";
