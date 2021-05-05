@@ -14,10 +14,10 @@
 // $db = substr($url["path"], 1);
 
 
-$server = "localhost";
-$username = "adminyotes";
-$password = "]hNfc%~jm1^u";
-$db = "yoteschat";
+$server = "freedb.tech:3306";
+$username = "freedbtech_yotechater";
+$password = "2tCRxQbCJw47PR9";
+$db = "freedbtech_yoteschat";
 
 $conn = mysqli_connect($server, $username, $password, $db);
 
