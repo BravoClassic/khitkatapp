@@ -16,6 +16,7 @@ sendButton.onclick = () => {
                 let data = xhr.response;
                 let responseFromPHP = data.split(",");
                 if (data[1] == data[3]) {
+                    console.log(data);
                     if (Notification.permission == "granted") {
                         showNotification(responseFromPHP);
                     } else if (Notification.permission != "denied") {
