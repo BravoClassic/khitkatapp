@@ -13,11 +13,15 @@
 // $password = $url["pass"];
 // $db = substr($url["path"], 1);
 
+// $server = "freedb.tech";
+// $username = "freedbtech_yotechater";
+// $password = "2tCRxQbCJw47PR9";
+// $db = "freedbtech_yoteschat";
 
-$server = "freedb.tech";
-$username = "freedbtech_yotechater";
-$password = "2tCRxQbCJw47PR9";
-$db = "freedbtech_yoteschat";
+$server = "160.153.133.168";
+$username = "adminyotes";
+$password = "]hNfc%~jm1^u";
+$db = "yoteschat";
 
 $conn = mysqli_connect($server, $username, $password, $db);
 
