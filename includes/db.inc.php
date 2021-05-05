@@ -14,7 +14,7 @@
 // $db = substr($url["path"], 1);
 
 
-$server = "freedb.tech:3306";
+$server = "freedb.tech";
 $username = "freedbtech_yotechater";
 $password = "2tCRxQbCJw47PR9";
 $db = "freedbtech_yoteschat";
