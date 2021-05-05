@@ -20,7 +20,7 @@
 
 $server = "160.153.133.168";
 $username = "adminyotes";
-$password = "]hNfc%~jm1^u";
+$password = "Bravo@123";
 $db = "yoteschat";
 
 $conn = mysqli_connect($server, $username, $password, $db);
